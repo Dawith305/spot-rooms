@@ -2,11 +2,15 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
+import MediumCard from "../components/MediumCard";
+import LargeCard from "../components/LargeCard";
+import Footer from "../components/Footer";
+
 
 //passing props from the fetch method serer processed
 //we can pass the whole props as "props" or we can {exploreData}
 //this is called destructring
-export default function Home({exploreData}) {
+export default function Home({exploreData, cardsData}) {
   return (
     <div className="">
       <Head>
@@ -39,7 +43,30 @@ export default function Home({exploreData}) {
 
 
         {/* Live Anywhere Section */}
+
+        <section>
+          <h2 className="text-4xl font-semibold pb-6">Live Anywhere</h2>
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3">
+          {cardsData?.map((item => (
+            <MediumCard 
+            // for now unique ID
+            key={item.img}
+            img={item.img} 
+            title={item.title}/>
+          )))}
+          </div>
+        </section>
+
+
+        {/* Big Card Section */}
+        <LargeCard img="https://links.papareact.com/4cj"
+                    title="The Greatest Outdoors"
+                    description="Whilist curated by out top team"
+                    buttonText="Get Inspired"/>
       </main>
+
+
+      <Footer/>
     </div>
   );
 }
@@ -49,9 +76,14 @@ export async function getStaticProps() {
     (res) => res.json()
   );
 
+  const cardsData = await fetch("https://links.papareact.com/zp1").then(
+    (res) => res.json()
+  );
+
   return {
     props: {
       exploreData,
+      cardsData
     },
   };
 }

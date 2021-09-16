@@ -18,9 +18,10 @@ function Header() {
 
             {/* middle search */}
             <div className="flex items-center md:border-2 rounded-full 
-                            py-2 md:shadow-md">
+                            border-gray-200 py-2 md:shadow-md">
                 <input className="pl-5 outline-none bg-transparent 
-                                flex-grow text-sm text-gray-600 placeholder-gray-400" type="text" placeholder="Start your search"/>
+                                flex-grow text-sm text-gray-600 
+                                placeholder-gray-400" type="text" placeholder="Start your search"/>
                 {/* visible ones it hits medium */}
                 <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 rounded-full p-2
                  text-white cursor-pointer mx-2"/>
