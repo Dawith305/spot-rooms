@@ -45,7 +45,7 @@ export default function Home({exploreData, cardsData}) {
         {/* Live Anywhere Section */}
 
         <section>
-          <h2 className="text-4xl font-semibold pb-6">Live Anywhere</h2>
+          <h2 className="text-4xl font-semibold pb-6 pt-4">Live Anywhere</h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3">
           {cardsData?.map((item => (
             <MediumCard 
