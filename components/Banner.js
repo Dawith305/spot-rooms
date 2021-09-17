@@ -8,12 +8,13 @@ function Banner() {
         //for mobile the rest break points starting from sm 
         //will be added to based on what we need 
         <div className="relative h-[300px] sm:h-[400px]
-         lg:[500px] xl:[600px] xxl:[600px]">
+         lg:h-[500px] 2xl:h-[600px] 2xl:h-[700px]">
             <Image src="https://links.papareact.com/0fm" 
-            layout="fill"objectFit="cover"/>
+                    layout="fill" 
+                    objectFit="cover"/>
         
             <div className="absolute top-1/2 w-full
-                     text-center">
+                            text-center">
                 <p className="text-sm sm:text-lg font-semibold">We have the perfect PLACES :)</p>
                 <button className="text-purple-500 bg-white px-10 py-4 shadow-md
                                     rounded-full rounded-4 font-bold my-3 hover:shadow-xl
