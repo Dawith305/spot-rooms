@@ -2,5 +2,5 @@
 React based Web app to find and explore rooms on your location.
 
 ## Demo Preview
-spot-rooms.vercel.app
+https://spot-rooms.vercel.app
 
