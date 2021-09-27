@@ -3,6 +3,6 @@ module.exports = {
         domains: ["links.papareact.com"],
     },
     env:{
-        NEXT_PUBLIC_mapbox_key: process.env.NEXT_PUBLIC_mapbox_key
+        mapbox_key: "pk.eyJ1IjoiZGF3aXRoMzA1IiwiYSI6ImNrdHptM3FtbTBranIybnBjMWI1ZWI3YmQifQ.2mt5qXtTeY2vdwzrHKGbuA"
     }
 };

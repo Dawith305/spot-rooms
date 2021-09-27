@@ -6,7 +6,8 @@ import {StarIcon} from "@heroicons/react/solid"
 function InfoCard({img,location,title,total,description,star, price }) {
     return (
         <div className="flex py-7 px-2 border-b cursor-pointer
-                        hover:opacity-80 hover:shadow-lg
+                        shadow-lg rounded-xl
+                        hover:opacity-80 hover:shadow-2xl
                         transition duration-200 ease-out
                         first: border-t
                         ">
